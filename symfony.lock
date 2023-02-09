@@ -39,7 +39,7 @@
         ]
     },
     "phpunit/phpunit": {
-        "version": "9.6",
+        "version": "10.0",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -280,6 +280,6 @@
         ]
     },
     "twig/extra-bundle": {
-        "version": "v3.5.1"
+        "version": "v3.5.0"
     }
 }

@@ -7,16 +7,16 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Pidev 3A36{% endblock %}</title>
 
 
         {% block stylesheets %}
         <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="{{asset('https://fonts.googleapis.com')}}">
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="{{asset('https://fonts.gstatic.com')}}" crossorigin>
         
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link href="{{asset('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap')}}" rel="stylesheet">
 
         <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
@@ -35,7 +35,7 @@ https://templatemo.com/tm-566-medic-care
 
 -->
     {% endblock %}
-       
+  
     </head>
     
     <body id="top">
@@ -56,11 +56,11 @@ https://templatemo.com/tm-566-medic-care
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#hero">Home</a>
+                                <a class="nav-link" href="{{path('app_student_index')}}">Home</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{path('app_student_index')}}">About</a>
+                                <a class="nav-link" href="{{path('app_student_new')}}">About</a>
                             </li>
 
                             <li class="nav-item">
@@ -140,10 +140,12 @@ https://templatemo.com/tm-566-medic-care
         </main>
 
 
-
         {% block body %}
         
+        
         {% endblock %}
+
+
 
         <footer class="site-footer section-padding" id="contact">
             <div class="container">
@@ -200,7 +202,9 @@ https://templatemo.com/tm-566-medic-care
             </section>
         </footer>
 
+
         {% block javascripts %}
+        <!-- JAVASCRIPT FILES -->
         <script src="{{asset('js/jquery.min.js')}}"></script>
         <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
         <script src="{{asset('js/owl.carousel.min.js')}}"></script>
@@ -214,7 +218,6 @@ https://templatemo.com/tm-566-medic-care
 
 -->
     {% endblock %}
-        <!-- JAVASCRIPT FILES -->
-    
+
     </body>
 </html>

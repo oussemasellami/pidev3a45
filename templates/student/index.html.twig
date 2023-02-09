@@ -3,9 +3,26 @@
 {% block title %}Student index{% endblock %}
 
 {% block body %}
-    <h1>Student index</h1>
+<br>
+<br>
+<center><a href="{{ path('app_student_new') }}">Create new</a></center>
+<br>
+<div class="container">
+<div class="card" style="width: 18rem;">
+    {% for student in students %}
+    <img class="card-img-top" src="{{asset('images/slider/young-asian-female-dentist-white-coat-posing-clinic-equipment.jpg')}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ student.nsc }}</h5>
+      <p class="card-text"> {{ student.email }}</p>
+      <a href="{{ path('app_student_show', {'id': student.id}) }}"  class="btn btn-primary">show</a>
+      <a href="{{ path('app_student_edit', {'id': student.id}) }}" class="btn btn-primary">edit</a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+  
 
-    <table class="table">
+    <!--<table class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -31,7 +48,7 @@
             </tr>
         {% endfor %}
         </tbody>
-    </table>
+    </table>-->
 
-    <a href="{{ path('app_student_new') }}">Create new</a>
+    
 {% endblock %}

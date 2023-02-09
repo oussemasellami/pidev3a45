@@ -15,11 +15,11 @@ class Student
     private ?int $id = null;
 
     #[ORM\Column(length: 20)]
-    #[Assert\NotBlank(message: "le champ est vide!!!")]
+    #[Assert\NotBlank(message: "vous devez mettre votre nsc!!!")]
     private ?string $nsc = null;
 
     #[ORM\Column(length: 50)]
-    #[Assert\Email(message: 'The email is not a valid email.',)]
+    #[Assert\Email(message: 'The email {{ value }} is not a valid email.',)]
     private ?string $email = null;
 
     public function getId(): ?int
